@@ -15,9 +15,11 @@ async function handleSubmit(event) {
 
     console.log("Dados do usuário no console:", userExists);
 
-    // Redireciona para a Home
-    window.location.href = "../HomePage/HomePage.html";
-    return;
+    // Atraso de 10 segundos antes de redirecionar para a Home
+    setTimeout(() => {
+      window.location.href = "../HomePage/HomePage.html";
+      return;
+    }, 10000);
   }
 
   // Cria uma instância da classe User e armazenando no localStorage
