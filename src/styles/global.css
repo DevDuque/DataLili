@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-color);
+  font-family: var(--primary-font);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  background-color: var(--background-color);
+
+  overflow: hidden;
+}
+
+:root {
+  --background-color: #e5e5e5;
+  --darker-background-color: #d9d9d9;
+
+  --text-color: #0c0d0a;
+  --lighter-text-color: #8f908e;
+
+  --primary-color: #9bb832;
+  --darker-primary-color: #6e8324;
+  --lighter-primary-color: #afc65b;
+
+  --secondary-color: #c85a2b;
+  --darker-secondary-color: #8e401f;
+  --lighter-secondary-color: #d37b55;
+
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Lily Script One", sans-serif;
+}

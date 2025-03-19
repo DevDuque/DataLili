@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Ícone & Estilizações -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/icons/logoIcon.svg"
+    />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+
+    <link rel="stylesheet" href="./LoginPage.css" />
+
+    <title>DataLili - Login Page</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo-container">
+        <img src="../../assets/images/Logo.svg" alt="Logo Datalili" />
+
+        <h1>DataLili</h1>
+      </div>
+
+      <form method="POST" class="login-form" action="">
+        <div class="input-group">
+          <label for="email"> Email </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="datalili@lili.com"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password"> Senha </label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+    </div>
+
+    <div class="image-container">
+      <img src="../../assets/images/login.png" alt="Imagem de login" />
+      <div class="text-overlay">
+        <h2>Tudo pronto para mais um dia de <b>sucesso</b>?</h2>
+        <p>
+          Entre no seu dashboard e mantenha o <b>controle total</b> das
+          operações.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="./LoginPage.js"></script>
+  </body>
+</html>
