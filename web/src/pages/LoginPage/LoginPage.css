@@ -26,7 +26,7 @@
   font-family: var(--secondary-font);
 }
 
-.login-form {
+#login-form {
   width: 100%;
 
   border-radius: 8px;
@@ -64,6 +64,7 @@
 
   outline: none;
   background-color: transparent;
+
 }
 
 .input-group ::placeholder {
