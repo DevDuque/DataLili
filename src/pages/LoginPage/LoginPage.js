@@ -11,15 +11,17 @@ async function handleSubmit(event) {
   const userExists = User.getUser();
 
   if (userExists && userExists.email === email && userExists.senha === senha) {
-    alert("Você já está logado!");
+    alert(
+      "Você já está logado! Redirecionando você para tela inicial em 5 segundos"
+    );
 
     console.log("Dados do usuário no console:", userExists);
 
-    // Atraso de 10 segundos antes de redirecionar para a Home
+    // Atraso de 5 segundos antes de redirecionar para a Home
     setTimeout(() => {
       window.location.href = "../HomePage/HomePage.html";
       return;
-    }, 10000);
+    }, 5000);
   }
 
   // Cria uma instância da classe User e armazenando no localStorage
@@ -27,10 +29,14 @@ async function handleSubmit(event) {
 
   console.log("Dados do usuário no console:", user);
 
-  // Atraso de 10 segundos antes de redirecionar para a Home
+  alert(
+    "Logado com Sucesso! Redirecionando você para tela inicial em 5 segundos"
+  );
+
+  // Atraso de 5 segundos antes de redirecionar para a Home
   setTimeout(() => {
     window.location.href = "../HomePage/HomePage.html";
-  }, 10000);
+  }, 5000);
 }
 
 // Esperando o DOM carregar antes de adicionar o event listener
