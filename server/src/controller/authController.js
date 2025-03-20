@@ -13,7 +13,6 @@ dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 const API_URL = process.env.API_URL;
 const API_TOKEN = process.env.API_TOKEN;
-
 export const login = async (req, res) => {
   try {
     const response = await axios.get(API_URL, {
@@ -25,18 +24,23 @@ export const login = async (req, res) => {
 
     const data = response.data;
 
-    if (!data.items || data.items.length === 0) {
+    // Verifica se o e-mail e a senha são válidos
+    const userItem = data.items.find(
+      (item) =>
+        item.email === req.body.email && req.body.password === "DataLili"
+    );
+
+    if (!userItem) {
       return res.status(404).json({ message: "Nenhum usuário encontrado." });
     }
 
-    const { name, email, phone, personType } = data.items[0];
-    const senha = "DataLili";
+    const { name, email, phone, personType } = userItem;
 
-    const user = new User(name, email, senha, phone, personType);
+    const user = new User(name, email, req.body.password, phone, personType);
 
     return res.status(200).json(user);
   } catch (error) {
     console.error("Erro ao buscar usuários:", error);
-    res.status(500).json({ message: "Erro ao processar login." });
+    return res.status(500).json({ message: "Erro ao processar login." });
   }
 };
