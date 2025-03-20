@@ -3,8 +3,6 @@ import User from "../../models/User.js";
 async function login(event) {
   event.preventDefault();
 
-  console.log("Login iniciado...");
-
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -50,10 +48,5 @@ async function login(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
-  if (loginForm) {
-    loginForm.addEventListener("submit", login);
-    console.log("Event listener adicionado ao formulário.");
-  } else {
-    console.error("Formulário de login não encontrado!");
-  }
+  loginForm.addEventListener("submit", login);
 });
