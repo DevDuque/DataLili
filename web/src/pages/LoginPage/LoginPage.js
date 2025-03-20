@@ -21,7 +21,6 @@ async function login(event) {
 
     const userData = await response.json();
 
-    // Criando a instância do usuário
     const user = new User(
       userData.name,
       userData.email,
@@ -29,8 +28,7 @@ async function login(event) {
       userData.phone,
       userData.personType
     );
-
-    // Substitui o usuário logado anterior
+    
     User.saveLoggedUser(user);
 
     alert(
