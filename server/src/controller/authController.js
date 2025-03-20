@@ -36,7 +36,7 @@ export const login = async (req, res) => {
 
     const { name, email, phone, personType } = userItem;
 
-    const user = new User(name, email, req.body.password, phone, personType);
+    const user = new User(name, email, phone, personType);
 
     return res.status(200).json(user);
   } catch (error) {
