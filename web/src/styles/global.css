@@ -15,8 +15,6 @@ body {
   width: 100vw;
   height: 100vh;
 
-  display: flex;
-
   background-color: var(--background-color);
 
   overflow: hidden;
